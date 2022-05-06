@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "Read Another Book Switcher",
+  "short_name": "Read Another Book",
+  "description": "Replaces Harry Potter house names with other four humors characters.",
+  "author": "VexVexVex",
+  "version": "1.0",
+  "icons": {},
+  "browser_action": {
+    "default_title": "Read Another Book Switcher",
+    "default_icon": "",
+    "default_popup": "popup.html"
+  },
+  "content_scripts":
+  [
+    {
+      "matches": ["*://*/*"],
+      "all_frames": true,
+      "js": ["content_script.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
